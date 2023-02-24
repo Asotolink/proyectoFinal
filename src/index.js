@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Categorias from './pages/Categorias';
 import Perfil from './pages/Perfil';
 import Dificultad from './pages/Dificultad';
+import Test from './pages/Test';
 const browserRouter = createBrowserRouter([
   {
     path: '/',
@@ -20,6 +21,9 @@ const browserRouter = createBrowserRouter([
   },{
     path: '/dificultad',
     element: <Dificultad />
+  },{
+    path: '/test',
+    element: <Test />
   }
   
 ])

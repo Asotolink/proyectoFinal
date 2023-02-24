@@ -1,0 +1,39 @@
+.separacionDificultad{
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    margin: auto;
+}
+
+.tituloDificultad{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 12px;
+
+}
+
+.mainDificultad{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.botonesDif{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.dificultad{
+    margin-bottom: 25%;
+}
+
+
+.btnDif{
+    width: 90%;
+    height: 75px;
+    margin: auto;
+}
