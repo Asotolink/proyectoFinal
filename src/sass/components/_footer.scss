@@ -1,0 +1,21 @@
+/* ********* */
+/* @FOOTER */
+/* ********* */
+
+footer{
+    text-align: center;
+    background-color: $colorFondo;
+    padding: 5px;
+    margin-bottom: 48px;
+    
+}
+
+.copy{
+    color: white;
+    padding: 3px 15px;
+}
+
+.rSocial{
+    display: flex;
+    justify-content: space-around;
+}

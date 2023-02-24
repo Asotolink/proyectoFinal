@@ -1,0 +1,10 @@
+.navbar{
+    position: fixed;
+    bottom: 0;
+    width: 360px;
+    height: 48px;   
+    background-color: $fondoNavbar;
+    display: flex;
+    justify-content: space-around;
+    
+}

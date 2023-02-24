@@ -1,0 +1,92 @@
+/* ********* */
+/* @CATEGORIAS */
+/* ********* */
+
+$categoriasImg: (
+    f1:  url('../public/img/rCat1.webp') no-repeat center center / cover,
+    f2:  url('../public/img/rCat2.webp') no-repeat center center / cover,
+    f3:  url('../public/img/rCat3.webp') no-repeat center center / cover,
+    f4: url('../public/img/rCat4.webp') no-repeat center center / cover,
+    f5: url('../public/img/rCat5.webp') no-repeat center center / cover,
+    f6: url('../public/img/rCat6.webp') no-repeat center center / cover
+
+);
+
+
+@each $nombre, $img in $categoriasImg {
+    
+    .#{$nombre}{
+        background: $img;
+    }
+    
+}
+
+.mainCategorias{
+    height: 67vh;
+    padding: 5%;
+}
+
+.tituloCategoria{
+    color: white;
+}
+
+.buscador{
+    background-color: $colorFondo;
+    height: 48px;
+    display: flex;
+    border-radius: 150px;
+    width: 250px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formBusc{
+    width: 60%;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.separacionBuscador{
+    background-color: white;
+    height: 85%;
+    width: 2px;
+    margin: auto 0;
+}
+
+
+.inpBuscador{
+    border: none;
+    background: none;
+    height: 48px;
+    width: 100%;;
+    color: white;
+}
+
+.inpBuscador::placeholder{
+    color: white;
+    width: auto;
+    border: none;
+}
+
+
+.zonaCategorias{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 3fr);;
+    grid-gap: 18px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.cat{
+    height: 105px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

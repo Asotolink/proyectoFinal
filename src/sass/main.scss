@@ -1,0 +1,33 @@
+// *** BÁSICO ***
+// RESET
+@import 'base/normalize';
+@import 'base/reset';
+
+// VARIABLES y FUNCIONES
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// TIPOGRAFÍA
+@import 'base/typography';
+
+// *******
+// COMPONENTS
+@import 'components/buttons';
+@import 'components/banner';
+@import 'components/footer';
+@import 'components/navbar';
+
+// LAYOUTS
+@import 'layout/header';
+@import 'layout/navigator';
+@import 'layout/footer';
+@import 'layout/forms';
+@import 'layout/grid';
+@import 'layout/sidebar';
+
+// PAGES
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/categorias';
+@import 'pages/dificultad';
+
