@@ -3,6 +3,7 @@ import Header from '../Componentes/Header';
 import Navbar from '../Componentes/Navbar';
 
 function Dificultad() {
+    var dificultad = "";
     return (
         <div className="categoriasContainer">
             <header>
@@ -14,11 +15,12 @@ function Dificultad() {
                     <div className='separacionDificultad'></div>
                 </section>
                 <section className='botonesDif'>
-                    <button className='boton btnDif'>FÁCIL</button>
+                    
+                    <a href='/test' className='boton btnDif'><p>FÁCIL</p></a>
                     <br></br>
-                    <button className='boton btnDif'>MEDIO</button>
+                    <a href='/test' className='boton btnDif'><p>MEDIO</p></a>
                     <br></br>
-                    <button className='boton btnDif'>DIFÍCIL</button>
+                    <a href='/test' className='boton btnDif'><p>DIFÍCIL</p></a>
                 </section>
             </main>
             <Navbar></Navbar>

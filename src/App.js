@@ -19,9 +19,9 @@ function App() {
       </header>
       <main className='mainIndex'>
         <p className='descripcionIndex texto'>Realiza tests de los temas que te interesen y consigue tantos puntos como puedas. ¡Enséñale a tus amigos y al mundo entero tus logros y tu nivel!</p>
-        <button className='boton'>Inicia Sesión</button>
+        <a href='/login' className='boton'><p>Inicia Sesión</p></a>
         <br></br>
-        <button className='boton'>Regístrate</button>
+        <a href='/registro' className='boton'><p>Regístrate</p></a>
 
         <h4>Tutorial Básico</h4>
         <p className='texto'>Escoge una categoría.</p>
