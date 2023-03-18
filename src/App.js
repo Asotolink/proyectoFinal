@@ -1,10 +1,13 @@
 import './App.css';
 import Footer from './Componentes/Footer';
 import Navbar from './Componentes/Navbar';
+import { Route } from 'react-router-dom';
 
 function App() {
   return (
+
     <div className="container">
+      
       <header className="header">
         <picture>
           <source

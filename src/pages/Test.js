@@ -6,13 +6,6 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function Test() {
-    /* fetch('http://localhost/api/random-test.php')
-      .then(response => response.json())
-      .then(data => {
-        // Aquí puedes trabajar con los datos devueltos por la API, por ejemplo, mostrarlos en pantalla
-        console.log(data);
-      })
-      .catch(error => console.error(error)); */
 
     const [currentQuestion, setCurrentQuestion] = useState('');
     const [options, setOptions] = useState([]);
@@ -21,17 +14,11 @@ function Test() {
     const [indice, setIndice] = useState(0);
     const [score, setScore] = useState(0);
     const { categoria } = useParams();
+    const { id } = useParams();
     const [preguntas, setPreguntas] = useState([]);
     const [loading, setLoading] = useState(true);
     const [finished, setFinished] = useState(false);
     useEffect(() => {
-        // Función para cargar una nueva pregunta y sus opciones de respuesta
-        /* fetch(JSON)
-        .then(response => response.json())
-        .then(data => {
-            console.log("hola", data);
-            setQuestions(data);
-        }).then(loadQuestion()) */
         const fetchData = async () => {
             const result = await axios.get(
                 `/apiRest/post.php?categoria=${categoria}`
@@ -50,6 +37,7 @@ function Test() {
         if (preguntas.length > 0) {
             if (preguntas.length == indice) {
                 setFinished(true);
+
             } else {
                 // Lógica para cargar una nueva pregunta y sus opciones de respuesta
                 // Se actualizan los estados de currentQuestion, options y correctAnswer
@@ -113,6 +101,24 @@ function Test() {
         }
         return shuffledArray;
     }
+    useEffect(() => {
+        if (finished) {
+            const data = {
+                id: id,
+                categoria: categoria,
+                puntaje: score,
+            };
+            axios.put('/apiRest/post.php', data, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                console.log(response);
+            }).catch(error => {
+                console.error(error);
+            });
+        }
+    }, [finished]);
 
     return (
         <div className='containerTest'>
@@ -122,6 +128,7 @@ function Test() {
                 <div>
                     <p>Enhorabuena, has completado el test con un total de {score} aciertos!!</p>
                     <a href='/perfil' className='boton'><p>¡Accede a tu perfil!</p></a>
+
                 </div>
             ) : (
                 <div className='test'>

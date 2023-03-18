@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Prueba() {
-    const [preguntas, setPreguntas] = useState([]);
+    window.location.href = 'http://localhost/apiRest/perfil.php';
+    /* const [preguntas, setPreguntas] = useState([]);
     const [loading, setLoading] = useState(true);
     axios.get(`/apiRest/post.php?categoria=programacion`)
         .then(response => {
@@ -22,11 +23,11 @@ function Prueba() {
         console.log(preguntas[0].titulo_pregunta + "En el else");
         return (
             <div>
-                {/* <p>{preguntas[0].titulo_pregunta}</p> */}
+                {<p>{preguntas[0].titulo_pregunta}</p>}
             </div>
         );
-        /* console.log(preguntas); */
-    }
+        console.log(preguntas);
+    } */
 }
 
 export default Prueba;

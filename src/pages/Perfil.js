@@ -1,9 +1,10 @@
+import Footer from '../Componentes/Footer';
+import Header from '../Componentes/Header';
+import Navbar from '../Componentes/Navbar';
+
 function Perfil() {
-    return (
-      <div>
-        <h1>PÁGINA DE PERFIL</h1>
-      </div>
-    );
-  }
-  
-  export default Perfil;
+
+  window.location.href = 'http://localhost/apiRest/perfil.php';
+}
+
+export default Perfil;

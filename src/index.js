@@ -17,16 +17,19 @@ const browserRouter = createBrowserRouter([
     path: '/',
     element: <App />
   },{
+    path: '/categorias/:id',
+    element: <Categorias />
+  },{
     path: '/categorias',
     element: <Categorias />
   },{
-    path: '/perfil',
+    path: '/perfil' ,
     element: <Perfil />
   },{
     path: '/dificultad',
     element: <Dificultad />
   },{
-    path: '/test/:categoria',
+    path: '/test/:categoria/:id',
     element: <Test />
   },{
     path: '/registro',
@@ -38,6 +41,7 @@ const browserRouter = createBrowserRouter([
     path: '/prueba',
     element: <Prueba />
   }
+  
   
 ])
 

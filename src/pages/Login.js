@@ -15,6 +15,7 @@ function Login() {
     });
 
     const [loginCorrecto, setLoginCorrecto] = useState(false);
+    const [idUsuario, setIdUsuario] = useState(0);
 
     const userExists = event => {
         return new Promise((resolve, reject) => {
@@ -43,8 +44,9 @@ function Login() {
 
         try {
             const exists = await userExists(credenciales.email);
-            if (exists) {
+            if (exists.length > 0) {
                 console.log("EXISTE");
+                setIdUsuario(exists);
 
             } else {
                 console.log("DICE QUE NO EXISTE");
@@ -91,10 +93,7 @@ function Login() {
             <main className="mainDificultad">
                 <section className=''>
                     {loginCorrecto ? (
-                        <section>
-                            <p>¡Bienvenvedio crack!</p>
-                            <a href='/perfil' className='boton'><p>¡Accede a tu perfil!</p></a>
-                        </section>
+                        window.location.href = '/categorias/'+idUsuario
                     ) : (
                         <form onSubmit={handleSubmit}>
                             <div>
