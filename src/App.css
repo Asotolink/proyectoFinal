@@ -322,9 +322,14 @@ template {
   margin: 0;
 }
 
+body {
+  height: 100vh;
+}
+
 /* ********* */
 /* @VARIABLES */
 /* ********* */
+/* 241D2F */
 /* ********* */
 /* @MIXINS */
 /* ********* */
@@ -361,13 +366,11 @@ template {
 footer {
   text-align: center;
   background-color: #20182B;
-  padding: 5px;
-  margin-bottom: 48px;
 }
 
 .copy {
   color: white;
-  padding: 3px 15px;
+  padding: 6px 15px;
 }
 
 .rSocial {
@@ -378,17 +381,46 @@ footer {
       justify-content: space-around;
 }
 
+.rSocial > a {
+  padding: 5px;
+}
+
+.rSocial > a > img {
+  width: 40px;
+  height: 40px;
+}
+
 .navbar {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   width: 360px;
   height: 48px;
-  background-color: #241D2F;
+  background-color: #574079;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar > a > img {
+  width: 35px;
+}
+
+.navbar > a {
+  padding: 7px;
+}
+
+.imgHeader {
+  width: 100%;
+}
+
+.picHeader {
+  display: block;
+  height: 73px;
 }
 
 /* ********* */
@@ -418,6 +450,14 @@ body {
 
 .container {
   max-width: 360px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .mainIndex {
@@ -431,12 +471,22 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
   padding: 5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .foto1C {
   width: 100%;
+}
+
+.picApp {
+  display: block;
+  height: 278px;
 }
 
 /* ********* */
@@ -469,13 +519,43 @@ body {
   background: url("../public/img/rCat6.webp") no-repeat center center/cover;
 }
 
+.categoriasContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .mainCategorias {
-  height: 67vh;
   padding: 5%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .tituloCategoria {
   color: white;
+}
+
+.tituloCategorias {
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .buscador {
@@ -666,6 +746,7 @@ a {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 8px;
 }
 
 .opcionesTest {
@@ -693,9 +774,348 @@ a {
   padding: 15px 0;
 }
 
-.separacion {
+.separacionTest {
   height: 2px;
   background-color: black;
   width: 80%;
   margin: auto;
+  margin-bottom: 10px;
+}
+
+.containerTest {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainTest {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.headerTest {
+  margin-bottom: 15px;
+}
+
+.testResuelto {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.testResuelto > p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.btnTests {
+  margin: 0;
+}
+
+/* ********* */
+/* @LOGIN */
+/* ********* */
+.tituloLogin {
+  font-size: 1.8rem;
+}
+
+.cuerpoLogin {
+  height: 65vh;
+  padding: 5%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.formLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 70%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.formLogin > div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.formLogin > div > label {
+  font-weight: bold;
+}
+
+.inputLogin {
+  width: 100%;
+  height: 55px;
+  border-radius: 150px;
+  background-color: #20182B;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.inputLogin::-webkit-input-placeholder {
+  color: white;
+  text-align: center;
+}
+
+.inputLogin::-moz-placeholder {
+  color: white;
+  text-align: center;
+}
+
+.inputLogin:-ms-input-placeholder {
+  color: white;
+  text-align: center;
+}
+
+.inputLogin::-ms-input-placeholder {
+  color: white;
+  text-align: center;
+}
+
+.inputLogin::placeholder {
+  color: white;
+  text-align: center;
+}
+
+.btnLogin {
+  margin: 0 auto;
+}
+
+.labelLogin {
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.separacionLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sepLogin1, .sepLogin2 {
+  border: 1.4px solid black;
+  width: 45%;
+  height: 0px;
+}
+
+.centroSeparacionLogin {
+  padding: 8px;
+}
+
+.enlaceRegistro {
+  color: blue;
+}
+
+/* ********* */
+/* @REGISTRO */
+/* ********* */
+.registroContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bodyRegistro {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.tituloRegistro {
+  font-size: 1.8rem;
+  padding: 15px;
+}
+
+.mainRegistro {
+  height: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.mainRegistro > section {
+  margin-bottom: 60px;
+}
+
+.formRegistro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.formRegistro > div {
+  width: 73%;
+  padding: 6px;
+}
+
+.formRegistro > div > p {
+  color: red;
+}
+
+.formRegistro > div > label {
+  font-weight: bold;
+}
+
+.inputRegistro {
+  width: 100%;
+  height: 50px;
+  border-radius: 150px;
+  background-color: #20182B;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.btnRegistro {
+  margin-top: 18px;
+}
+
+.inputRegistro::-webkit-input-placeholder {
+  color: rgb(211, 206, 206);
+  text-align: center;
+}
+
+.inputRegistro::-moz-placeholder {
+  color: rgb(211, 206, 206);
+  text-align: center;
+}
+
+.inputRegistro:-ms-input-placeholder {
+  color: rgb(211, 206, 206);
+  text-align: center;
+}
+
+.inputRegistro::-ms-input-placeholder {
+  color: rgb(211, 206, 206);
+  text-align: center;
+}
+
+.inputRegistro::placeholder {
+  color: rgb(211, 206, 206);
+  text-align: center;
+}
+
+.enlaceLogin {
+  color: blue;
+}
+
+.confirmacion {
+  font-size: 1rem;
+}
+
+.acabado {
+  height: 61vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.acabado > h4 {
+  font-size: 1.3rem;
+}
+
+.btnAcabado {
+  margin: 0;
+  /* margin-top: 40px; */
+}
+
+.terminosContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainTerminos {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 15px;
+  text-align: justify;
+}
+
+.mainTerminos > h4 {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.olTerm > li {
+  list-style: none;
 }

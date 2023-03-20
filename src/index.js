@@ -11,10 +11,13 @@ import Dificultad from './pages/Dificultad';
 import Test from './pages/Test';
 import Registro from './pages/Registro';
 import Login from './pages/Login';
-import Prueba from './pages/Prueba';
+import Terminos from './pages/Terminos';
 const browserRouter = createBrowserRouter([
   {
     path: '/',
+    element: <App />
+  },{
+    path: '/:id',
     element: <App />
   },{
     path: '/categorias/:id',
@@ -38,8 +41,8 @@ const browserRouter = createBrowserRouter([
     path: '/login',
     element: <Login />
   },{
-    path: '/prueba',
-    element: <Prueba />
+    path: '/terminos/:id',
+    element: <Terminos />
   }
   
   

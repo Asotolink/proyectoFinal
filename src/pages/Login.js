@@ -44,7 +44,8 @@ function Login() {
 
         try {
             const exists = await userExists(credenciales.email);
-            if (exists.length > 0) {
+            console.log(exists);
+            if (exists > 0) {
                 console.log("EXISTE");
                 setIdUsuario(exists);
 
@@ -87,45 +88,57 @@ function Login() {
 
     return (
         <div className="loginContainer">
-            <header>
+            {/* <header> */}
                 <Header></Header>
-            </header>
-            <main className="mainDificultad">
+            {/* </header> */}
+            <Navbar></Navbar>
+            <main className="mainLogin">
                 <section className=''>
                     {loginCorrecto ? (
-                        window.location.href = '/categorias/'+idUsuario
+                        window.location.href = 'http://localhost/apiRest/perfil.php'
+
                     ) : (
-                        <form onSubmit={handleSubmit}>
-                            <div>
-                                <label htmlFor="email">
-                                    Email:
-                                </label>
-                                <input
-                                    name="email"
-                                    type="email"
-                                    value={credenciales.email}
-                                    onChange={handleInputChange} />
-                                {credencialesErrors.email && <p>{credencialesErrors.email}</p>}
+                        <section className='cuerpoLogin'>
+                            <p className='tituloLogin'>Inicia sesión</p>
+                            <form className='formLogin' onSubmit={handleSubmit}>
+                                <div>
+                                    <label className='labelLogin' htmlFor="email">
+                                        Email:
+                                    </label>
+                                    <br></br>
+                                    <input className='inputLogin'
+                                        name="email"
+                                        type="email" placeholder='example@gmail.com'
+                                        value={credenciales.email}
+                                        onChange={handleInputChange} />
+                                    {credencialesErrors.email && <p>{credencialesErrors.email}</p>}
+                                </div>
+                                <div>
+                                    <label className='labelLogin'>
+                                        Contraseña:
+                                    </label>
+                                    <br></br>
+                                    <input className='inputLogin'
+                                        name="password" placeholder='************'
+                                        type="password"
+                                        value={credenciales.password}
+                                        onChange={handleInputChange} />
+                                    {credencialesErrors.password && <p>{credencialesErrors.password}</p>}
+                                </div>
+                                {credencialesErrors.login && <p>{credencialesErrors.login}</p>}
+                                <button className='boton btnLogin' type="submit">Entrar</button>
+                            </form>
+                            <div className='separacionLogin'>
+                                <div className='sepLogin1'></div>
+                                <p className='centroSeparacionLogin'> O </p>
+                                <div className='sepLogin2'></div>
                             </div>
-                            <br></br>
-                            <div>
-                                <label>
-                                    Contraseña:
-                                </label>
-                                <input
-                                    name="password"
-                                    type="password"
-                                    value={credenciales.password}
-                                    onChange={handleInputChange} />
-                                {credencialesErrors.password && <p>{credencialesErrors.password}</p>}
-                            </div>
-                            {credencialesErrors.login && <p>{credencialesErrors.login}</p>}
-                            <button type="submit">Iniciar sesión</button>
-                        </form>
+                            <a className='enlaceRegistro' href='/registro'>¿No tienes una cuenta? ¡Regístrate!</a>
+                        </section>
                     )}
                 </section>
             </main>
-            <Navbar></Navbar>
+            
             <footer>
                 <Footer></Footer>
             </footer>

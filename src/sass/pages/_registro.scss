@@ -1,0 +1,90 @@
+/* ********* */
+/* @REGISTRO */
+/* ********* */
+
+
+.registroContainer{
+    display: flex;
+    flex-direction: column;
+}
+.bodyRegistro{
+    flex-grow: 1;
+}
+.tituloRegistro{
+    font-size: 1.8rem;
+    padding: 15px;
+}
+
+.mainRegistro{
+    height: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.mainRegistro > section {
+    margin-bottom: 60px;
+}
+
+.formRegistro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formRegistro >div{
+    width: 73%;
+    padding: 6px;
+}
+
+.formRegistro >div > p{
+    color: red;
+}
+
+.formRegistro >div > label{
+    font-weight: bold;
+}
+.inputRegistro{
+    width: 100%;
+    height: 50px;
+    border-radius: 150px;
+    background-color: $colorFondo;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+.btnRegistro{
+    margin-top: 18px;
+}
+
+.inputRegistro::placeholder{
+    color: rgb(211, 206, 206);
+    text-align: center;
+}
+
+.enlaceLogin{
+    color: blue;
+}
+
+.confirmacion{
+    font-size: 1rem;
+}
+
+.acabado{
+    height: 61vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.acabado > h4{
+    font-size: 1.3rem;
+
+}
+
+.btnAcabado{
+    margin: 0;
+    /* margin-top: 40px; */
+}

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 8px;
 }
 
 .opcionesTest{
@@ -23,9 +24,43 @@
     padding: 15px 0;
 }
 
-.separacion{
+.separacionTest{
     height: 2px;
     background-color: black;
     width: 80%;
     margin: auto;
+    margin-bottom: 10px;
+}
+
+.containerTest{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTest{
+    flex-grow: 1;
+}
+
+.headerTest{
+    margin-bottom: 15px;
+}
+
+.testResuelto{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.testResuelto > p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.btnTests{
+    margin: 0;
 }

@@ -16,6 +16,7 @@
 @import 'components/banner';
 @import 'components/footer';
 @import 'components/navbar';
+@import 'components/header';
 
 // LAYOUTS
 @import 'layout/header';
@@ -31,4 +32,7 @@
 @import 'pages/categorias';
 @import 'pages/dificultad';
 @import 'pages/test';
+@import 'pages/login';
+@import 'pages/registro';
+@import 'pages/terminos';
 

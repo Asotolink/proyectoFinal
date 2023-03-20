@@ -1,7 +1,7 @@
 function Header() {
 
     return (
-        <picture>
+        <picture className="picHeader">
           <source
             srcSet="
         /img/header.webp 1x,
@@ -9,7 +9,7 @@ function Header() {
         /img/header@3x.webp 3x"
           />
 
-          <img src="" alt="Header-Banner" />
+          <img className="imgHeader" src="" alt="Header-Banner" />
         </picture>
 )
 

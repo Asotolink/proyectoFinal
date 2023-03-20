@@ -1,0 +1,18 @@
+.terminosContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTerminos{
+    flex-grow: 1;
+    padding: 15px;
+    text-align: justify;
+}
+.mainTerminos > h4 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 20px;
+}
+.olTerm > li{
+    list-style: none;
+}

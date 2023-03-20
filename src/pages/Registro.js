@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Footer from '../Componentes/Footer';
+import Header from '../Componentes/Header';
+import Navbar from '../Componentes/Navbar';
 
 function Registro() {
     const [formValues, setFormValues] = useState({
@@ -112,48 +115,71 @@ function Registro() {
         }));
     };
     return (
-        <div>
-            <h1>Formulario de Registro</h1>
-            {formSubmitted ? (
-                <section>
-                    <p>¡Gracias por registrarte!</p>
-                    <a href='/perfil' className='boton'><p>¡Accede a tu perfil!</p></a>
-                </section>
-            ) : (
-                <section>
-                    <form onSubmit={handleSubmit}>
-                        <div>
-                            <label htmlFor="nombre">Nombre</label>
-                            <input type="text" name="nombre" value={formValues.nombre} onChange={handleInputChange} />
-                            {formErrors.nombre && <p>{formErrors.nombre}</p>}
-                        </div>
-                        <div>
+        <div className="registroContainer">
+            <div className='cabeceraRegistro'>
+            <header>
+                <Header></Header>
+            </header>
+            <Navbar></Navbar>
+            </div>
+            <div className='bodyRegistro'>
+            <main className="mainRegistro">
+                
+                {formSubmitted ? (
+                    <section className='acabado'>
+                        <h4>¡Registro completado!</h4>
+                        <h5 className='confirmacion'>Gracias por registrarte, inicia sesión para acceder a tu perfil</h5>
+                        <a href='/perfil' className='boton btnAcabado'><p>Inicia Sesión</p></a>
+                    </section>
+                ) : (
+                    <section>
+                        <p className='tituloRegistro'>Registro</p>
+                        <form className='formRegistro' onSubmit={handleSubmit}>
+                            <div>
+
+                                <label htmlFor="nombre">Nombre</label>
+                                <br></br>
+                                <input className='inputRegistro' placeholder='ej: Juan' type="text" name="nombre" value={formValues.nombre} onChange={handleInputChange} />
+                                {formErrors.nombre && <p>{formErrors.nombre}</p>}
+                            </div>
+                            <div>
                             <label htmlFor="apellidos">Apellido</label>
-                            <input type="text" name="apellidos" value={formValues.apellidos} onChange={handleInputChange} />
+                            <br></br>
+                            <input className='inputRegistro' placeholder='ej: García López' type="text" name="apellidos" value={formValues.apellidos} onChange={handleInputChange} />
                             {formErrors.apellidos && <p>{formErrors.apellidos}</p>}
-                        </div>
-                        <div>
-                            <label htmlFor="email">Correo electrónico</label>
-                            <input type="email" name="email" value={formValues.email} onChange={handleInputChange} />
-                            {formErrors.email && <p>{formErrors.email}</p>}
-                        </div>
-                        <div>
-                            <label htmlFor="password">Contraseña</label>
-                            <input type="password" name="password" value={formValues.password} onChange={handleInputChange} />
-                            {formErrors.password && <p>{formErrors.password}</p>}
-                        </div>
-                        <div>
-                            <label htmlFor="confirmPassword">Confirmar Contraseña</label>
-                            <input type="password" name="confirmPassword" value={formValues.confirmPassword} onChange={handleInputChange} />
-                            {formErrors.confirmPassword && <p>{formErrors.confirmPassword}</p>}
-                        </div>
-                        <button type="submit" >Registrarse</button>
-                    </form>
-                    <br></br>
-                    <br></br>
-                    <a href='/login' className=''><p>¿Ya tienes cuenta? Log In</p></a>
-                </section>
-            )}
+                            </div>
+
+                            <div>
+                                <label htmlFor="email">Correo electrónico</label>
+                                <br></br>
+                                <input className='inputRegistro' placeholder='ej: example@gmail.com' type="email" name="email" value={formValues.email} onChange={handleInputChange} />
+                                {formErrors.email && <p>{formErrors.email}</p>}
+                            </div>
+                            <div>
+                                <label htmlFor="password">Contraseña</label>
+                                <br></br>
+                                <input className='inputRegistro' type="password" name="password" placeholder='**********' value={formValues.password} onChange={handleInputChange} />
+                                {formErrors.password && <p>{formErrors.password}</p>}
+                            </div>
+                            <div>
+                                <label htmlFor="confirmPassword">Confirmar Contraseña</label>
+                                <br></br>
+                                <input className='inputRegistro' type="password" placeholder='**********' name="confirmPassword" value={formValues.confirmPassword} onChange={handleInputChange} />
+                                {formErrors.confirmPassword && <p>{formErrors.confirmPassword}</p>}
+                            </div>
+                            <button className='boton btnRegistro' type="submit" >Registrarse</button>
+                        </form>
+                        <br></br>
+                        <br></br>
+                        <a href='/login' className='enlaceLogin'><p>¿Ya tienes cuenta? ¡Inicia Sesión!</p></a>
+                    </section>
+                )}
+            </main>
+            </div>
+            
+            <footer>
+                <Footer></Footer>
+            </footer>
         </div>
     );
 } export default Registro;

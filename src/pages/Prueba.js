@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Prueba() {
-    window.location.href = 'http://localhost/apiRest/perfil.php';
+    return(
+        <div>HOLa</div>
+    );
     /* const [preguntas, setPreguntas] = useState([]);
     const [loading, setLoading] = useState(true);
     axios.get(`/apiRest/post.php?categoria=programacion`)

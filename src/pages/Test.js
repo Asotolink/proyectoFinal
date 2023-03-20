@@ -119,37 +119,74 @@ function Test() {
             });
         }
     }, [finished]);
+    const [tiempoRestante, setTiempoRestante] = useState(30);
+
+    useEffect(() => {
+        // Intervalo de actualización en milisegundos
+        const intervalo = setInterval(() => {
+            // Reducir el tiempo restante
+            setTiempoRestante(tiempoRestante => tiempoRestante - 1);
+        }, 1000);
+
+        // Limpiar el intervalo cuando el componente se desmonte
+        return () => clearInterval(intervalo);
+    }, []);
+
+    // Calcular el ancho actual de la barra
+    const ancho = (tiempoRestante / 30) * 100;
+
+    // Estilos CSS para la barra de progreso
+    const estiloBarra = {
+        height: '10px',
+        backgroundColor: 'gray',
+        width: '100%',
+        position: 'relative',
+        padding: '2px',
+    };
+
+    // Estilos CSS para la parte coloreada de la barra
+    const estiloParteColoreada = {
+        height: '100%',
+        backgroundColor: 'red',
+        width: `${ancho}%`,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+    };
 
     return (
         <div className='containerTest'>
-            <Header></Header>
-            {/* {console.log(finished + "mira")} */}
-            {finished ? (
-                <div>
-                    <p>Enhorabuena, has completado el test con un total de {score} aciertos!!</p>
-                    <a href='/perfil' className='boton'><p>¡Accede a tu perfil!</p></a>
+            <header className='headerTest'>
+                <Header></Header>
+                <Navbar id={id}></Navbar>
+            </header>
+            <main className='mainTest'>
+                {/* {console.log(finished + "mira")} */}
+                {finished ? (
+                    <div className='testResuelto'>
+                        <p>¡Enhorabuena! Has completado el test con un total de {score} aciertos.</p>
+                        <a href='/perfil' className='boton btnTests'><p>¡Accede a tu perfil!</p></a>
 
-                </div>
-            ) : (
-                <div className='test'>
-                    <p className='categoria'>{categoria}</p>
-                    <h6 className='preguntaTest'>{currentQuestion}</h6>
-                    <div className='separacion'></div>
-                    <ul className='zonaRespuestas'>
-                        {options.map((option) => (
-                            <li className='boton opcionesTest' key={option} onClick={() => handleAnswerSubmission(option)}>
-                                {option}
-                            </li>
-                        ))}
-                    </ul>
-                    <div>{timeLeft}</div>
-                    <div>Score: {score}</div>
-                </div>
-            )}
-            <Navbar></Navbar>
-            <footer>
-                <Footer />
-            </footer>
+                    </div>
+                ) : (
+                    <div className='test'>
+                        <div style={estiloBarra}>
+                            <div style={estiloParteColoreada}></div>
+                        </div>
+                        <p className='categoria'>{categoria}</p>
+                        <h6 className='preguntaTest'>{currentQuestion}</h6>
+                        <div className='separacionTest'></div>
+                        <ul className='zonaRespuestas'>
+                            {options.map((option) => (
+                                <li className='boton opcionesTest' key={option} onClick={() => handleAnswerSubmission(option)}>
+                                    {option}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </main>
+
         </div>
     );
 }

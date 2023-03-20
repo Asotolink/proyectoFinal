@@ -1,0 +1,75 @@
+/* ********* */
+/* @LOGIN */
+/* ********* */
+
+.tituloLogin{
+    font-size: 1.8rem;
+}
+.cuerpoLogin{
+    height: 65vh;
+    padding: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+    box-sizing: border-box;
+}
+
+.formLogin > div{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.formLogin > div > label{
+    font-weight: bold;
+}
+
+.inputLogin{
+    width: 100%;
+    height: 55px;
+    border-radius: 150px;
+    background-color: $colorFondo;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.inputLogin::placeholder{
+    color: white;
+    text-align: center;
+    
+}
+.btnLogin{
+    margin: 0 auto;
+}
+
+.labelLogin{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.separacionLogin{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.sepLogin1, .sepLogin2{
+    border: 1.4px solid black;
+    width: 45%;
+    height: 0px;
+}
+.centroSeparacionLogin{
+    padding: 8px;
+}
+
+.enlaceRegistro{
+    color: blue;
+}
