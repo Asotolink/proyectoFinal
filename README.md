@@ -8,7 +8,7 @@ npm install react-router-dom
 Axios: Nos ayuda a comunicarnos con nuestro servidor (API REST). El comando que usaremos para instalarlo es: 
 npm install axios
 
-Para la parte servidor necesitaremos tener encendidos los servicios de Apache y MySQL de XAMPP e insertar la carpeta de la parte servidor en htdocs. Ahora hay que importar la BD proporcionada junto a esta documentación. Para la BD estoy utilizando el siguiente usuario
+Para la parte servidor necesitaremos tener encendidos los servicios de Apache y MySQL de XAMPP e insertar la carpeta de la parte servidor en htdocs. Ahora hay que importar la BD proporcionada. Para la BD estoy utilizando el siguiente usuario
 
 usuario: edib 
 
