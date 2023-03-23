@@ -18,6 +18,7 @@ function Test() {
     const [preguntas, setPreguntas] = useState([]);
     const [loading, setLoading] = useState(true);
     const [finished, setFinished] = useState(false);
+    const [tiempoRestante, setTiempoRestante] = useState(30);
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios.get(
@@ -89,7 +90,7 @@ function Test() {
             setScore((prevScore) => prevScore + 1);
         }
         // Lógica para cambiar a la siguiente pregunta
-        console.log(preguntas);
+        setTiempoRestante(30);
         loadQuestion();
     }
 
@@ -119,40 +120,12 @@ function Test() {
             });
         }
     }, [finished]);
-    const [tiempoRestante, setTiempoRestante] = useState(30);
 
-    useEffect(() => {
-        // Intervalo de actualización en milisegundos
-        const intervalo = setInterval(() => {
-            // Reducir el tiempo restante
-            setTiempoRestante(tiempoRestante => tiempoRestante - 1);
-        }, 1000);
 
-        // Limpiar el intervalo cuando el componente se desmonte
-        return () => clearInterval(intervalo);
-    }, []);
+    
 
-    // Calcular el ancho actual de la barra
-    const ancho = (tiempoRestante / 30) * 100;
-
-    // Estilos CSS para la barra de progreso
-    const estiloBarra = {
-        height: '10px',
-        backgroundColor: 'gray',
-        width: '100%',
-        position: 'relative',
-        padding: '2px',
-    };
-
-    // Estilos CSS para la parte coloreada de la barra
-    const estiloParteColoreada = {
-        height: '100%',
-        backgroundColor: 'red',
-        width: `${ancho}%`,
-        position: 'absolute',
-        top: 0,
-        left: 0,
-    };
+  
+    
 
     return (
         <div className='containerTest'>
@@ -161,7 +134,6 @@ function Test() {
                 <Navbar id={id}></Navbar>
             </header>
             <main className='mainTest'>
-                {/* {console.log(finished + "mira")} */}
                 {finished ? (
                     <div className='testResuelto'>
                         <p>¡Enhorabuena! Has completado el test con un total de {score} aciertos.</p>
@@ -170,10 +142,12 @@ function Test() {
                     </div>
                 ) : (
                     <div className='test'>
-                        <div style={estiloBarra}>
-                            <div style={estiloParteColoreada}></div>
+                        
+                        <div className='tiempoCat'>
+                            <p className='categoria'>{categoria}</p>
+                            <p className='tiempoRestante'>Tiempo restante: <p className='tiempoRest'>  {timeLeft}</p></p>
                         </div>
-                        <p className='categoria'>{categoria}</p>
+
                         <h6 className='preguntaTest'>{currentQuestion}</h6>
                         <div className='separacionTest'></div>
                         <ul className='zonaRespuestas'>

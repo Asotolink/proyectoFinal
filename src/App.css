@@ -765,6 +765,10 @@ a {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 55vh;
 }
 
@@ -830,6 +834,36 @@ a {
 
 .btnTests {
   margin: 0;
+}
+
+.tiempoCat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tiempoCat > p {
+  width: auto;
+}
+
+.categoria {
+  color: rgb(82, 38, 38);
+}
+
+.tiempoRestante {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+}
+
+.tiempoRestante > p {
+  color: red;
+  width: auto;
+  margin-left: 7px;
 }
 
 /* ********* */
