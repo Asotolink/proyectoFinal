@@ -11,7 +11,13 @@ function App() {
 <div className='cabeceraApp'>
       <header>
         <picture className='picApp'>
-          <source
+          <source media="(min-width: 601px)"
+            srcSet="
+        /img/bannerEsc.webp 1x,
+        /img/bannerEsc@2x.webp 2x,
+        /img/bannerEsc@3x.webp 3x"
+          />
+          <source media="(max-width: 600px)"
             srcSet="
         /img/header-banner.webp 1x,
         /img/header-banner@2x.webp 2x,
@@ -56,10 +62,7 @@ function App() {
           <img className='foto1C' src="" alt="Escoge una categoría" />
         </picture> */}
       </main>
-      
-      <footer>
-        <Footer></Footer>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }

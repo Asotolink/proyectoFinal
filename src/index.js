@@ -4,10 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 import Categorias from './pages/Categorias';
 import Perfil from './pages/Perfil';
-import Dificultad from './pages/Dificultad';
 import Test from './pages/Test';
 import Registro from './pages/Registro';
 import Login from './pages/Login';
@@ -28,9 +26,6 @@ const browserRouter = createBrowserRouter([
   },{
     path: '/perfil' ,
     element: <Perfil />
-  },{
-    path: '/dificultad',
-    element: <Dificultad />
   },{
     path: '/test/:categoria/:id',
     element: <Test />

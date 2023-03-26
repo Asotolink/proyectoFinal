@@ -11,6 +11,8 @@
     height: 68px;
 }
 
+
+
 .zonaRespuestas{
     display: flex;
     flex-direction: column;
@@ -90,4 +92,16 @@
     color: red;
     width: auto;
     margin-left: 7px;
+}
+
+@media (min-width: 800px){
+    .opcionesTest{
+        width: 40%;
+        padding: 8px;
+        height: 68px;
+    }
+
+    .preguntaTest{
+        font-size: 1.6rem;
+    }
 }

@@ -10,10 +10,10 @@ function Categorias() {
 
     <div className="categoriasContainer">
       <div className='cabeceraCategorias'>
-      <header>
-        <Header></Header>
-      </header>
-      <Navbar id={id}></Navbar>
+        <header>
+          <Header></Header>
+        <Navbar id={id}></Navbar>
+        </header>
       </div>
 
       <main className='mainCategorias'>
@@ -53,45 +53,45 @@ function Categorias() {
 
           </section>
         ) : (
-            <section className='zonaCategorias'>
-              <a href='/login' >
-                <div className="f1 cat">
-                  <p className=' tituloCategoria'>Videojuegos</p>
-                </div>
-              </a>
-              <a href='/login'>
-                <div className="f2 cat">
-                  <p className=' tituloCategoria'>Programación</p>
-                </div>
-              </a>
-              <a href='/login'>
-                <div className="f3 cat">
-                  <p className=' tituloCategoria'>Series y películas</p>
-                </div>
-              </a>
-              <a href='/login'>
-                <div className="f4 cat">
-                  <p className=' tituloCategoria'>Historia</p>
-                </div>
-              </a>
-              <a href='/login'>
-                <div className="f5 cat">
-                  <p className=' tituloCategoria'>Idiomas</p>
-                </div>
-              </a>
-              <a href='/login'>
-                <div className="f6 cat">
-                  <p className=' tituloCategoria'>Música</p>
-                </div>
-              </a>
-            </section>
+          <section className='zonaCategorias'>
+            <a href='/login' >
+              <div className="f1 cat">
+                <p className=' tituloCategoria'>Videojuegos</p>
+              </div>
+            </a>
+            <a href='/login'>
+              <div className="f2 cat">
+                <p className=' tituloCategoria'>Programación</p>
+              </div>
+            </a>
+            <a href='/login'>
+              <div className="f3 cat">
+                <p className=' tituloCategoria'>Series y películas</p>
+              </div>
+            </a>
+            <a href='/login'>
+              <div className="f4 cat">
+                <p className=' tituloCategoria'>Historia</p>
+              </div>
+            </a>
+            <a href='/login'>
+              <div className="f5 cat">
+                <p className=' tituloCategoria'>Idiomas</p>
+              </div>
+            </a>
+            <a href='/login'>
+              <div className="f6 cat">
+                <p className=' tituloCategoria'>Música</p>
+              </div>
+            </a>
+          </section>
         )}
       </main>
-      
-      <footer>
-        <Footer id={id}></Footer>
-      </footer>
-      
+
+
+      <Footer id={id}></Footer>
+
+
     </div>
 
 

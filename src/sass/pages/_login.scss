@@ -6,6 +6,9 @@
     font-size: 1.8rem;
 }
 .cuerpoLogin{
+    width: 300px;
+    margin: 2% auto;
+    background-color: rgb(223, 219, 224);
     height: 65vh;
     padding: 5%;
     text-align: center;
@@ -23,12 +26,14 @@
 }
 
 .formLogin > div{
-    width: 90%;
     margin: 0 auto;
 }
 
 .formLogin > div > label{
     font-weight: bold;
+}
+.formLogin > div > input{
+    padding: 0px 25px;
 }
 
 .inputLogin{

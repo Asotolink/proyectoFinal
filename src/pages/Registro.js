@@ -117,69 +117,68 @@ function Registro() {
     return (
         <div className="registroContainer">
             <div className='cabeceraRegistro'>
-            <header>
-                <Header></Header>
-            </header>
-            <Navbar></Navbar>
+                <header>
+                    <Header></Header>
+                </header>
+                <Navbar></Navbar>
             </div>
             <div className='bodyRegistro'>
-            <main className="mainRegistro">
-                
-                {formSubmitted ? (
-                    <section className='acabado'>
-                        <h4>¡Registro completado!</h4>
-                        <h5 className='confirmacion'>Gracias por registrarte, inicia sesión para acceder a tu perfil</h5>
-                        <a href='/perfil' className='boton btnAcabado'><p>Inicia Sesión</p></a>
-                    </section>
-                ) : (
-                    <section>
-                        <p className='tituloRegistro'>Registro</p>
-                        <form className='formRegistro' onSubmit={handleSubmit}>
-                            <div>
+                <main className="mainRegistro">
 
-                                <label htmlFor="nombre">Nombre</label>
-                                <br></br>
-                                <input className='inputRegistro' placeholder='ej: Juan' type="text" name="nombre" value={formValues.nombre} onChange={handleInputChange} />
-                                {formErrors.nombre && <p>{formErrors.nombre}</p>}
-                            </div>
-                            <div>
-                            <label htmlFor="apellidos">Apellido</label>
+                    {formSubmitted ? (
+                        <section className='acabado'>
+                            <h4>¡Registro completado!</h4>
+                            <h5 className='confirmacion'>Gracias por registrarte, inicia sesión para acceder a tu perfil</h5>
+                            <a href='/perfil' className='boton btnAcabado'><p>Inicia Sesión</p></a>
+                        </section>
+                    ) : (
+                        <section className='registroIncompleto'>
+                            <p className='tituloRegistro'>Registro</p>
+                            <form className='formRegistro' onSubmit={handleSubmit}>
+                                <div>
+
+                                    <label htmlFor="nombre">Nombre</label>
+                                    <br></br>
+                                    <input className='inputRegistro' placeholder='ej: Juan' type="text" name="nombre" value={formValues.nombre} onChange={handleInputChange} />
+                                    {formErrors.nombre && <p>{formErrors.nombre}</p>}
+                                </div>
+                                <div>
+                                    <label htmlFor="apellidos">Apellido</label>
+                                    <br></br>
+                                    <input className='inputRegistro' placeholder='ej: García López' type="text" name="apellidos" value={formValues.apellidos} onChange={handleInputChange} />
+                                    {formErrors.apellidos && <p>{formErrors.apellidos}</p>}
+                                </div>
+
+                                <div>
+                                    <label htmlFor="email">Correo electrónico</label>
+                                    <br></br>
+                                    <input className='inputRegistro' placeholder='ej: example@gmail.com' type="email" name="email" value={formValues.email} onChange={handleInputChange} />
+                                    {formErrors.email && <p>{formErrors.email}</p>}
+                                </div>
+                                <div>
+                                    <label htmlFor="password">Contraseña</label>
+                                    <br></br>
+                                    <input className='inputRegistro' type="password" name="password" placeholder='**********' value={formValues.password} onChange={handleInputChange} />
+                                    {formErrors.password && <p>{formErrors.password}</p>}
+                                </div>
+                                <div>
+                                    <label htmlFor="confirmPassword">Confirmar Contraseña</label>
+                                    <br></br>
+                                    <input className='inputRegistro' type="password" placeholder='**********' name="confirmPassword" value={formValues.confirmPassword} onChange={handleInputChange} />
+                                    {formErrors.confirmPassword && <p>{formErrors.confirmPassword}</p>}
+                                </div>
+                                <button className='boton btnRegistro' type="submit" >Registrarse</button>
+                            </form>
                             <br></br>
-                            <input className='inputRegistro' placeholder='ej: García López' type="text" name="apellidos" value={formValues.apellidos} onChange={handleInputChange} />
-                            {formErrors.apellidos && <p>{formErrors.apellidos}</p>}
-                            </div>
-
-                            <div>
-                                <label htmlFor="email">Correo electrónico</label>
-                                <br></br>
-                                <input className='inputRegistro' placeholder='ej: example@gmail.com' type="email" name="email" value={formValues.email} onChange={handleInputChange} />
-                                {formErrors.email && <p>{formErrors.email}</p>}
-                            </div>
-                            <div>
-                                <label htmlFor="password">Contraseña</label>
-                                <br></br>
-                                <input className='inputRegistro' type="password" name="password" placeholder='**********' value={formValues.password} onChange={handleInputChange} />
-                                {formErrors.password && <p>{formErrors.password}</p>}
-                            </div>
-                            <div>
-                                <label htmlFor="confirmPassword">Confirmar Contraseña</label>
-                                <br></br>
-                                <input className='inputRegistro' type="password" placeholder='**********' name="confirmPassword" value={formValues.confirmPassword} onChange={handleInputChange} />
-                                {formErrors.confirmPassword && <p>{formErrors.confirmPassword}</p>}
-                            </div>
-                            <button className='boton btnRegistro' type="submit" >Registrarse</button>
-                        </form>
-                        <br></br>
-                        <br></br>
-                        <a href='/login' className='enlaceLogin'><p>¿Ya tienes cuenta? ¡Inicia Sesión!</p></a>
-                    </section>
-                )}
-            </main>
+                            <br></br>
+                            <a href='/login' className='enlaceLogin'><p>¿Ya tienes cuenta? ¡Inicia Sesión!</p></a>
+                        </section>
+                    )}
+                </main>
             </div>
-            
-            <footer>
-                <Footer></Footer>
-            </footer>
+
+            <Footer></Footer>
+
         </div>
     );
 } export default Registro;

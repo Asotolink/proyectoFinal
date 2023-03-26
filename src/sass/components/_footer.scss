@@ -9,7 +9,7 @@ footer{
 
 .copy{
     color: white;
-    padding: 6px 15px;
+    padding: 10px 15px;
 }
 
 .rSocial{
@@ -24,4 +24,13 @@ footer{
 .rSocial > a > img {
     width: 40px;
     height: 40px;
+}
+
+@media (min-width: 768px){
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
 }

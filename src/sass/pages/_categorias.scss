@@ -27,7 +27,7 @@ $categoriasImg: (
     flex-grow: 1;
 }
 .mainCategorias{
-    padding: 5%;
+    padding: 2% 5%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -39,48 +39,8 @@ $categoriasImg: (
 }
 
 .tituloCategorias{
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     text-align: center;
-}
-
-.buscador{
-    background-color: $colorFondo;
-    height: 48px;
-    display: flex;
-    border-radius: 150px;
-    width: 250px;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.formBusc{
-    width: 60%;
-    text-align: center;
-    padding-left: 15px;
-}
-
-.separacionBuscador{
-    background-color: white;
-    height: 85%;
-    width: 2px;
-    margin: auto 0;
-}
-
-
-.inpBuscador{
-    border: none;
-    background: none;
-    height: 48px;
-    width: 100%;;
-    color: white;
-}
-
-.inpBuscador::placeholder{
-    color: white;
-    width: auto;
-    border: none;
 }
 
 
@@ -98,8 +58,29 @@ a{
 
 .cat{
     height: 105px;
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 700px){
+    .zonaCategorias{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);;
+        grid-gap: 18px;
+    }
+
+    .cat{
+        height: 185px;
+    }
+
+    .tituloCategorias{
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+    }
+
+    .tituloCategoria{
+        font-size: 1.3rem;
+    }
 }

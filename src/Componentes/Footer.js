@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 
 function Footer() {
     const { id } = useParams();
-    return (<div>
+    return (<footer>
         <a href={"/terminos/" +id}><p className='copy'>© 2023 | Powered by Asotolink Tests | Términos y condiciones</p></a>
         <section className='rSocial'>
             <a href='https://es-es.facebook.com/'><img alt='Icono Facebook' src='/img/svg/facebook.svg'></img></a>
@@ -13,6 +13,6 @@ function Footer() {
 
         </section>
 
-</div>)
+</footer>)
 
 }export default Footer;

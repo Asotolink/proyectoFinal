@@ -89,7 +89,7 @@ function Login() {
     return (
         <div className="loginContainer">
             {/* <header> */}
-                <Header></Header>
+            <Header></Header>
             {/* </header> */}
             <Navbar></Navbar>
             <main className="mainLogin">
@@ -138,10 +138,10 @@ function Login() {
                     )}
                 </section>
             </main>
-            
-            <footer>
-                <Footer></Footer>
-            </footer>
+
+
+            <Footer></Footer>
+
         </div>
 
     );
